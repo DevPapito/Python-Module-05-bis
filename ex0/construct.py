@@ -35,11 +35,13 @@ def ft_with_ve_status() -> None:
     print("\nReagent installation path:")
     print(site.getsitepackages()[0])
 
+
 def main() -> None:
     if sys.prefix != sys.base_prefix:
         ft_with_ve_status()
     else:
         ft_no_ve_status()
 
+
 if __name__ == "__main__":
-	main()
+    main()

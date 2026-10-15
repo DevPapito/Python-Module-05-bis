@@ -1,15 +1,16 @@
 import importlib
 
+
 def main() -> None:
     names = ["pandas", "numpy"]
     all_present = True
     for name in names:
         try:
             module = importlib.import_module(name)
-            print(f"[OK] {name}: ({module.__version__})", end=' - ')
-            if name == 'pandas':
+            print(f"[OK] {name}: ({module.__version__})", end=" - ")
+            if name == "pandas":
                 print("Data manipulation ready")
-            elif name == 'numpy':
+            elif name == "numpy":
                 print("Numerical computation ready")
 
         except ModuleNotFoundError:
@@ -35,8 +36,9 @@ def main() -> None:
         "versions in poetry.lock so every install is identical."
     )
 
-    if all_present == True:
+    if all_present:
         print("\nAll reagents present and accounted for.")
 
+
 if __name__ == "__main__":
-	main()
+    main()

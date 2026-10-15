@@ -11,5 +11,6 @@ def main() -> None:
 
     print(f"Testing the hidden create_earth: {alchemy.create_earth()}")
 
+
 if __name__ == "__main__":
     main()
